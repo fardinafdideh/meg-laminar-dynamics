@@ -69,9 +69,9 @@ graph TD
  	- **Layer Generation:** Intermediate laminar surfaces are derived from the extracted Pial and White Matter boundaries, incorporating neurophysiological anatomical priors.
 - **MEG Stream:**
 	- **Stimulation:** Visual.
-	- **Headcast:** Individualized 3D-printed [headcasts](https://jbonaiuto.com/tags/head-cast/) are used during acquisition to eliminate head movement and ensure precise co-registration with the MRI.
+	- **[Headcast](https://jbonaiuto.com/tags/head-cast/):** Individualized 3D-printed headcasts are used during acquisition to eliminate head movement and ensure precise co-registration with the MRI.
 	- **Preprocessing:** A toolbox adapted from [Pipelines ILCB](https://github.com/brovelli/pipelines-ilcb), a rigorous multi-stage pipeline, allowing spatial-temporal-spectral filtering, and ensuring high signal-to-noise ratio (SNR), was developed and used to reject noisy window(s), sensor(s), ICA component(s), and trial(s).
-- **MRI-Informed Headcast-Powered MEG Source Reconstruction:** The Dynamic Imaging of Coherent Sources (DICS) beamforming method, which is based on reconstructing sources that show strong dependency (coherence) in the frequency domain, implemented in Pipelines ILCB was used to reconstruct source activities.
+- **Dynamic Multi-Laminar Headcast-Powered MRI-Informed MEG Source Reconstruction:** The Dynamic Imaging of Coherent Sources (DICS) beamforming method, which is based on reconstructing sources that show strong dependency (coherence) in the frequency domain, implemented in Pipelines ILCB was used to reconstruct source activities.
 
 ![](ppt/whiteInbetweenPial-layer-source-space.gif)
 
