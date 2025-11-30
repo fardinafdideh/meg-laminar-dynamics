@@ -54,7 +54,7 @@ graph TD
 	end
 
     %% Fusion
-    Layers --> Inv[Time-Resolved Source Reconstruction]
+    Layers --> Inv[Time-Resolved Multi-Laminar MRI-Informed MEG Source Reconstruction]
     trl --> Inv
 	%% HC --> win
 	HC --> MEG
