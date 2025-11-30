@@ -19,7 +19,7 @@ We reconstruct time-resolved laminar cortical dynamics across White Matter, In-b
 ```mermaid
 graph TD
     %% Inputs
-    subgraph Inputs
+    subgraph Modalities
     MRI[Quantitative MRI - MPM]
 	fMRI[fMRI]
 	aMRI[Anatomical MRI]
