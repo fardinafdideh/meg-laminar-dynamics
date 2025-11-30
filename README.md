@@ -14,20 +14,70 @@ This research work was supported by ERC project [BrainDyn](https://cordis.europa
 Understanding the directional flow of information in brain networks requires high spatiotemporal resolution. 
 We reconstruct time-resolved laminar cortical dynamics across White Matter, In-between, and Pial surfaces using MRI-informed MEG source reconstruction. This framework enables the disentanglement and tracking of feedforward and feedback information flows by resolving activity in deep versus superficial cortical layers.
 
-## 🚀 Laminar Dynamics 
-- **MRI Processing:**  
-	- Anatomical MRI ([Headcast](https://jbonaiuto.com/tags/head-cast/)): For precise co-registration.
-	- Quantitative MRI (MPM): Multi-Parameter Mapping ($R1, PD, MT, R2$) to extract cortical surfaces.
-	- VBQ, FreeSurfer, CSURF, and AFNI Processing: Extraction of high-resolution cortical meshes.
-- **MEG Processing:** A toolbox adapted from [Pipelines ILCB](https://github.com/brovelli/pipelines-ilcb), a rigorous multi-stage pipeline, allowing spatial-temporal-spectral filtering, and ensuring high signal-to-noise ratio (SNR), was developed and used to reject noisy window(s), sensor(s), ICA component(s), and trial(s).
-- **MRI-Informed MEG Source Reconstruction:** The Dynamic Imaging of Coherent Sources (DICS) beamforming method, which is based on reconstructing sources that show strong dependency (coherence) in the frequency domain, implemented in Pipelines ILCB was used to reconstruct source activities.
-- **Laminar Specificity:** Distinguishes between superficial (pial), middle, and deep (white matter) cortical layers dynamics to resolve feedforward vs. feedback information flow.
+## ⚙️ Pipeline
+![](ppt/Diapositive15.PNG)
+```mermaid
+graph TD
+    %% Inputs
+    subgraph Inputs
+    MRI[Quantitative MRI - MPM]
+	fMRI[fMRI]
+	aMRI[Anatomical MRI]
+    MEG[MEG]
+    end
+
+    %% MEG Stream
+    subgraph MEG Stream
+    MEG --> win[Noisy Windows Rejection]
+    win --> sen[Noisy Sensors Rejection]
+    sen --> comp[Noisy Components Rejection]
+	comp --> trl[Noisy Trials Rejection]
+    end
+
+    %% Functional Stream
+    subgraph fMRI Stream
+    fMRI --> ret[Retinotopy]
+    end
+
+    %% Structural Stream
+    subgraph MRI Stream
+    MRI --> VBQ[VBQ, FreeSurfer, CSURF, and AFNI]
+    VBQ --> Surf[Surface Extraction]
+    Surf --> Layers[Layer Generation: Pial, In-Between, White Matter]
+    end
+
+
+
+	%% coregistration
+	subgraph Coregistration
+	aMRI --> HC[Headcast]
+	end
+
+    %% Fusion
+    Layers --> Inv[Time-Resolved Source Reconstruction]
+    trl --> Inv
+	%% HC --> win
+	HC --> MEG
+```
+
+### 🚀 Laminar Dynamics 
+**Laminar specificity**, which is usefule in distinguishing between superficial (pial), middle, and deep (white matter) cortical layers dynamics to resolve feedforward vs. feedback information flow, is obtained from the following pipelines:
+- **MRI Stream:**  
+	- **Anatomical MRI:** It was used to create individualized 3D-printed [headcasts](https://jbonaiuto.com/tags/head-cast/) for precise co-registration and minimised head movements.
+	- **Quantitative MRI (MPM):** Multi-Parameter Mapping ($R1, PD, MT, R2$) to extract cortical surfaces.
+	- **Boundary Surfaces Extraction:** VBQ, FreeSurfer, CSURF, and AFNI processing are used to extract high-resolution cortical meshes for Pial and White Matter.
+ 	- **Layer Generation:** Intermediate laminar surfaces are derived from the extracted Pial and White Matter boundaries, incorporating neurophysiological anatomical priors.
+- **MEG Stream:**
+	- **Stimulation:** Visual.
+	- **Headcast:** Individualized 3D-printed [headcasts](https://jbonaiuto.com/tags/head-cast/) are used during acquisition to eliminate head movement and ensure precise co-registration with the MRI.
+	- **Preprocessing:** A toolbox adapted from [Pipelines ILCB](https://github.com/brovelli/pipelines-ilcb), a rigorous multi-stage pipeline, allowing spatial-temporal-spectral filtering, and ensuring high signal-to-noise ratio (SNR), was developed and used to reject noisy window(s), sensor(s), ICA component(s), and trial(s).
+- **MRI-Informed Headcast-Powered MEG Source Reconstruction:** The Dynamic Imaging of Coherent Sources (DICS) beamforming method, which is based on reconstructing sources that show strong dependency (coherence) in the frequency domain, implemented in Pipelines ILCB was used to reconstruct source activities.
 
 ![](ppt/whiteInbetweenPial-layer-source-space.gif)
 
-## ⚡ Spatial Prior Selection 
+### ⚡ Spatial Prior Selection 
 A dedicated GUI-based toolbox developed to optimize source reconstruction through:
-- **Interactive Prior Selection:** Manually select multiple spatial priors with real-time visualization of the selected spatial priors. 
+- **Interactive Prior Selection:** Manually select multiple spatial priors with real-time visualization. 
 - **fMRI Integration:** Visualizes source locations (spatial priors) overlaid on fMRI activation maps to constrain the source reconstruction problem (using the parametric empirical Bayesian framework in SPM).
   
 ![](ppt/spatialPriorManualSelection.gif)
