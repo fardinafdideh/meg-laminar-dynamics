@@ -6,7 +6,8 @@
 ![MEG](https://img.shields.io/badge/Modality-MRI%20%7C%20MEG-orange.svg)
 ![Framework](https://img.shields.io/badge/Framework-SPM%20%7C%20FieldTrip%20%7C%20VBQ%20%7C%20FreeSurfer%20%7C%20CSURF%20%7C%20AFNI%20%7C%20Psychtoolbox%20%7C%20Pipelines_ILCB-lightgrey.svg)
 
-Tracking Information Flow in Dynamic Communication in the Brain Networks: Optimal Localization of Brain Sources using MRI-Informed MEG
+Tracking Information Flow in Dynamic Communication in the Brain Networks: Optimal Localization of Brain Sources using MRI-Informed MEG.
+
 This research work was supported by ERC project [BrainDyn](https://cordis.europa.eu/project/id/716862) (PI: Dr. [Mathilde Bonnefond](https://scholar.google.com/citations?user=Xc1fz38AAAAJ&hl=en)).
 
 ## 📖 Overview
