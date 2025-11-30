@@ -1,14 +1,35 @@
 [![](https://img.shields.io/badge/DOI-10.1016/j.neuroimage.2020.116862-blue)](https://doi.org/10.1016/j.neuroimage.2020.116862)
 
-# Tracking Information Flow in Dynamic Communication in the Brain Networks: Optimal Localization of the Brain Sources ~~and Developing Functional Connectivity Approaches~~ using MEG
+# 🧠 Dynamic Laminar MEG Source Reconstruction
+![MEG](https://img.shields.io/badge/Modality-MRI%20%7C%20MEG-orange.svg)
+![Framework](https://img.shields.io/badge/Framework-SPM%20%7C%20FieldTrip%20%7C%20VBQ%20%7C%20FreeSurfer%20%7C%20CSURF%20%7C%20AFNI%20%7C%20Psychtoolbox%20%7C%20Pipelines_ILCB-lightgrey.svg)
 
-## Cortical (White matter, in-between, Pial) Dynamics Reconstructed using MEG (The Developed Toolbox Was Adapted from [pipelines-ilcb](https://github.com/brovelli/pipelines-ilcb))
+Tracking Information Flow in Dynamic Communication in the Brain Networks: Optimal Localization of Brain Sources using MRI-Informed MEG
+This research work was supported by ERC project [BrainDyn](https://cordis.europa.eu/project/id/716862) (PI: Dr. [Mathilde Bonnefond](https://scholar.google.com/citations?user=Xc1fz38AAAAJ&hl=en)).
+
+## 📖 Overview
+Understanding the directional flow of information in brain networks requires high spatiotemporal resolution. 
+We reconstruct time-resolved laminar cortical dynamics across White Matter, In-between, and Pial surfaces using MRI-informed MEG source reconstruction. This framework enables the disentanglement and tracking of feedforward and feedback information flows by resolving activity in deep versus superficial cortical layers.
+
+## 🚀 Laminar Dynamics 
+- **MRI Processing:**  
+	- Anatomical MRI ([Headcast](https://jbonaiuto.com/tags/head-cast/)): For precise co-registration.
+	- Quantitative MRI (MPM): Multi-Parameter Mapping ($R1, PD, MT, R2$) to extract cortical surfaces.
+	- VBQ, FreeSurfer, CSURF, and AFNI Processing: Extraction of high-resolution cortical meshes.
+- **MEG Processing:** A toolbox adapted from [Pipelines ILCB](https://github.com/brovelli/pipelines-ilcb), a rigorous multi-stage pipeline, allowing spatial-temporal-spectral filtering, and ensuring high signal-to-noise ratio (SNR), was developed and used to reject noisy window(s), sensor(s), ICA component(s), and trial(s).
+- **MRI-Informed MEG Source Reconstruction:** The Dynamic Imaging of Coherent Sources (DICS) beamforming method, which is based on reconstructing sources that show strong dependency (coherence) in the frequency domain, implemented in Pipelines ILCB was used to reconstruct source activities.
+- **Laminar Specificity:** Distinguishes between superficial (pial), middle, and deep (white matter) cortical layers dynamics to resolve feedforward vs. feedback information flow.
+
 ![](ppt/whiteInbetweenPial-layer-source-space.gif)
 
-## Developed Toolbox for Manually Selecting Multiple Spatial Priors, with Source Locations Shown in Black Dots and fMRI Activation in Yellow Cortex, in the Source Reconstruction Problem (Parametric Empirical Bayesian Framework using SPM)
+## ⚡ Spatial Prior Selection 
+A dedicated GUI-based toolbox developed to optimize source reconstruction through:
+- **Interactive Prior Selection:** Manually select multiple spatial priors with real-time visualization of the selected spatial priors. 
+- **fMRI Integration:** Visualizes source locations (spatial priors) overlaid on fMRI activation maps to constrain the source reconstruction problem (using the parametric empirical Bayesian framework in SPM).
+  
 ![](ppt/spatialPriorManualSelection.gif)
 
-## Tracking Information Flow in Dynamic Communication in the Brain Networks
+## 🔬 Tracking Information Flow in Dynamic Communication in the Brain Networks
 ![](ppt/Diapositive1.PNG)
 ![](ppt/Diapositive2.PNG)
 ![](ppt/Diapositive3.PNG)
@@ -63,6 +84,6 @@
 ![](ppt/Diapositive52.PNG)
 ![](ppt/Diapositive53.PNG)
 
-# How to cite
+## 📚 How to cite
 * **F. Afdideh**, et al., "Tracking Information Flow in Dynamic Communication in the Brain Networks: Optimal Localization of the Brain Sources and Developing Functional Connectivity Approaches using MEG", to be published.
-*	J. J. Bonaiuto, **F. Afdideh**, M. Ferez, K. Wagstyl, J. Mattout, M. Bonnefond, G. R Barnes, S. Bestmann, “Estimates of cortical column orientation improve MEG source inversion,” NeuroImage, vol. 216, p. 116862, Aug. 2020, doi: 10.1016/j.neuroimage.2020.116862.
+*	J. J. Bonaiuto, **F. Afdideh**, M. Ferez, K. Wagstyl, J. Mattout, M. Bonnefond, G. R Barnes, S. Bestmann, “Estimates of cortical column orientation improve MEG source inversion,” *[NeuroImage](https://www.sciencedirect.com/science/article/pii/S1053811920303487)*, vol. 216, p. 116862, Aug. 2020, doi: 10.1016/j.neuroimage.2020.116862.
