@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/badge/DOI-10.1016/j.neuroimage.2020.116862-blue)](https://doi.org/10.1016/j.neuroimage.2020.116862)
 
-# 🧠 Dynamic Laminar MEG Source Reconstruction
+# 🧠 Dynamic Multi-Laminar Headcast-Powered MRI-Informed MEG Source Reconstruction
 ![MEG](https://img.shields.io/badge/Modality-MRI%20%7C%20MEG-orange.svg)
 ![Framework](https://img.shields.io/badge/Framework-SPM%20%7C%20FieldTrip%20%7C%20VBQ%20%7C%20FreeSurfer%20%7C%20CSURF%20%7C%20AFNI%20%7C%20Psychtoolbox%20%7C%20Pipelines_ILCB-lightgrey.svg)
 
@@ -54,7 +54,7 @@ graph TD
 	end
 
     %% Fusion
-    Layers --> Inv[Time-Resolved Multi-Laminar MRI-Informed MEG Source Reconstruction]
+    Layers --> Inv[Dynamic Multi-Laminar Headcast-Powered MRI-Informed MEG Source Reconstruction]
     trl --> Inv
 	%% HC --> win
 	HC --> MEG
