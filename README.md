@@ -15,6 +15,7 @@ Understanding the directional flow of information in brain networks requires hig
 We reconstruct time-resolved laminar cortical dynamics across White Matter, In-between, and Pial surfaces using MRI-informed MEG source reconstruction. This framework enables the disentanglement and tracking of feedforward and feedback information flows by resolving activity in deep versus superficial cortical layers.
 
 ## ⚙️ Pipeline
+The workflow integrates structural anatomical data (quantitative & anatomical MRI) with functional data (MEG & fMRI) using individualized 3D-printed headcasts to reconstruct time-resolved MEG source activities.
 ![](ppt/Diapositive15.PNG)
 ```mermaid
 graph TD
@@ -49,7 +50,7 @@ graph TD
 
 
 	%% coregistration
-	subgraph Coregistration
+	subgraph Co-registration
 	aMRI --> HC[Headcast]
 	end
 
