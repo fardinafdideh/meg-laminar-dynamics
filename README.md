@@ -1,3 +1,5 @@
+![](ppt/logos.png)
+
 [![](https://img.shields.io/badge/DOI-10.1016/j.neuroimage.2020.116862-blue)](https://doi.org/10.1016/j.neuroimage.2020.116862)
 
 # 🧠 Dynamic Laminar MEG Source Reconstruction
