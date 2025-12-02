@@ -16,6 +16,7 @@ We reconstruct time-resolved laminar cortical dynamics across White Matter, In-b
 
 ## ⚙️ Pipeline
 The workflow integrates structural anatomical data (quantitative & anatomical MRI) with functional data (MEG & fMRI) using individualized 3D-printed headcasts to reconstruct time-resolved MEG source activities.
+
 ![](ppt/Diapositive15.PNG)
 ```mermaid
 graph TD
@@ -69,7 +70,8 @@ graph TD
 	- **Boundary Surfaces Extraction:** VBQ, FreeSurfer, CSURF, and AFNI processing are used to extract high-resolution cortical meshes for Pial and White Matter.
  	- **Layer Generation:** Intermediate laminar surfaces are derived from the extracted Pial and White Matter boundaries, incorporating neurophysiological anatomical priors.
 - **MEG Stream:**
-	- **Stimulation:** Visual.
+	- **[Visual Stimulation Framework](https://github.com/fardinafdideh/private2):** A visual stimulation (e.g., faces, gratings) toolbox using Psychtoolbox to drive fMRI and MEG experiments was designed and developed.
+ 	- **[MEG Setups Synchronization](https://github.com/fardinafdideh/meg-sync):** A framework was developed to ensure synchrony between multiple subsystems including the Controller PC, MEG Acquisition PC, and Eye-Tracking PC.
 	- **[Headcast](https://jbonaiuto.com/tags/head-cast/):** Individualized 3D-printed headcasts are used during acquisition to eliminate head movement and ensure precise co-registration with the MRI.
 	- **Preprocessing:** A toolbox adapted from [Pipelines ILCB](https://github.com/brovelli/pipelines-ilcb), a rigorous multi-stage pipeline, allowing spatial-temporal-spectral filtering, and ensuring high signal-to-noise ratio (SNR), was developed and used to reject noisy window(s), sensor(s), ICA component(s), and trial(s).
 - **Dynamic Multi-Laminar Headcast-Powered MRI-Informed MEG Source Reconstruction:** The Dynamic Imaging of Coherent Sources (DICS) beamforming method, which is based on reconstructing sources that show strong dependency (coherence) in the frequency domain, implemented in [Pipelines ILCB](https://github.com/brovelli/pipelines-ilcb) was used to reconstruct source activities.
