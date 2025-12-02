@@ -70,7 +70,7 @@ graph TD
 	- **Boundary Surfaces Extraction:** VBQ, FreeSurfer, CSURF, and AFNI processing are used to extract high-resolution cortical meshes for Pial and White Matter.
  	- **Layer Generation:** Intermediate laminar surfaces are derived from the extracted Pial and White Matter boundaries, incorporating neurophysiological anatomical priors.
 - **MEG Stream:**
-	- **[Visual Stimulation Framework](https://github.com/fardinafdideh/private2):** A visual stimulation (e.g., faces, gratings) toolbox using Psychtoolbox to drive fMRI and MEG experiments was designed and developed.
+	- **[Visual Stimulation Framework](https://github.com/fardinafdideh/private2):** A visual stimulation (e.g., faces, gratings) toolbox for face gender morphing, averaging, alignment, and equalization was designed and developed to drive fMRI and MEG experiments using Psychtoolbox.
  	- **[MEG Setups Synchronization](https://github.com/fardinafdideh/meg-sync):** A framework was developed to ensure synchrony between multiple subsystems including the Controller PC, MEG Acquisition PC, and Eye-Tracking PC.
 	- **[Headcast](https://jbonaiuto.com/tags/head-cast/):** Individualized 3D-printed headcasts are used during acquisition to eliminate head movement and ensure precise co-registration with the MRI.
 	- **Preprocessing:** A toolbox adapted from [Pipelines ILCB](https://github.com/brovelli/pipelines-ilcb), a rigorous multi-stage pipeline, allowing spatial-temporal-spectral filtering, and ensuring high signal-to-noise ratio (SNR), was developed and used to reject noisy window(s), sensor(s), ICA component(s), and trial(s).
