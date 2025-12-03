@@ -90,6 +90,7 @@ A dedicated GUI-based toolbox developed to optimize source reconstruction throug
 ![](ppt/Diapositive2.PNG)
 ![](ppt/Diapositive3.PNG)
 ![](ppt/Diapositive4.PNG)
+### Spatial Priors Selection
 ![](ppt/Diapositive5.PNG)
 ![](ppt/Diapositive6.PNG)
 ![](ppt/Diapositive7.PNG)
@@ -101,6 +102,7 @@ A dedicated GUI-based toolbox developed to optimize source reconstruction throug
 ![](ppt/Diapositive13.PNG)
 ![](ppt/Diapositive14.PNG)
 ![](ppt/Diapositive15.PNG)
+### Cortical Surfaces Extraction
 ![](ppt/Diapositive16.PNG)
 ![](ppt/Diapositive17.PNG)
 ![](ppt/Diapositive18.PNG)
@@ -127,6 +129,7 @@ A dedicated GUI-based toolbox developed to optimize source reconstruction throug
 ![](ppt/Diapositive39.PNG)
 ![](ppt/Diapositive40.PNG)
 ![](ppt/Diapositive41.PNG)
+### Laminar MEG Analysis Framework
 ![](ppt/Diapositive42.PNG)
 ![](ppt/Diapositive43.PNG)
 ![](ppt/Diapositive44.PNG)
