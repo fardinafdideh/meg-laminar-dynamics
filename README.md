@@ -8,7 +8,7 @@
 
 Tracking Information Flow in Dynamic Communication in the Brain Networks: Optimal Localization of Brain Sources using MRI-Informed MEG Source Reconstruction.
 
-This research work was supported by ERC project [BrainDyn](https://cordis.europa.eu/project/id/716862) (PI: Dr. [Mathilde Bonnefond](https://scholar.google.com/citations?user=Xc1fz38AAAAJ&hl=en)).
+This research work was supported by ERC project [BrainDyn](https://cordis.europa.eu/project/id/716862) (Supervisors: Prof. [Mathilde BONNEFOND](https://scholar.google.com/citations?user=Xc1fz38AAAAJ&hl=en), Prof. [Jérémie MATTOUT](https://scholar.google.com/citations?hl=en&user=QdwU_gIAAAAJ), and Prof. [Olivier BERTRAND](https://scholar.google.com/citations?hl=en&user=q3IB9XYAAAAJ)).
 
 ## 📖 Overview
 Understanding the directional flow of information in brain networks requires high spatiotemporal resolution. 
