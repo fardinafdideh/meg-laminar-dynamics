@@ -144,5 +144,5 @@ A dedicated GUI-based toolbox developed to optimize source reconstruction throug
 ![](ppt/Diapositive53.PNG)
 
 ## 📚 How to cite
-* **F. Afdideh**, M. Bonnefond, "Tracking Information Flow in Dynamic Communication in the Brain Networks: Optimal Localization of the Brain Sources and Developing Functional Connectivity Approaches using MEG", to be published.
+* **F. Afdideh**, M. Bonnefond, "Tracking Information Flow in Dynamic Communication in the Brain Networks: Optimal Localization of the Brain Sources and Developing Functional Connectivity Approaches using MEG", *in preparation*.
 *	J. J. Bonaiuto, **F. Afdideh**, M. Ferez, K. Wagstyl, J. Mattout, M. Bonnefond, G. R Barnes, S. Bestmann, “Estimates of cortical column orientation improve MEG source inversion,” *[NeuroImage](https://www.sciencedirect.com/science/article/pii/S1053811920303487)*, vol. 216, p. 116862, Aug. 2020, doi: 10.1016/j.neuroimage.2020.116862.
